@@ -56,6 +56,8 @@ require("lazy").setup({
 
 	require("custom/plugins/obsidian"),
 
+	require("custom/plugins/oil"),
+
 	-- Or just:
 	-- { import = 'custom.plugins' },
 })
