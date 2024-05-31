@@ -61,6 +61,14 @@ vim.keymap.set(
 	{ desc = "Golang quick [E]rror handling" }
 )
 
+-- Python if main
+vim.keymap.set(
+	"n",
+	"<leader>nm",
+	'odef main():<CR><Esc>Oprint("Hello World")<CR><CR><BS><Esc>iif __name__ == "__main__": <CR><Esc>Omain()<Esc>',
+	{ desc = "Python quick if __[N]ame__ == __[M]ain__:" }
+)
+
 -- [[ Basic Autocommands ]]
 --  See :help lua-guide-autocommands
 
