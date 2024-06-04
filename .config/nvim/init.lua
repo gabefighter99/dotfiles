@@ -46,7 +46,7 @@ require("lazy").setup({
 	-- highlight todo, notes, etc in comments
 	{ "folke/todo-comments.nvim", dependencies = { "nvim-lua/plenary.nvim" }, opts = { signs = false } },
 
-	require("custom/plugins/copilot"),
+	--require("custom/plugins/copilot"),
 
 	require("custom/plugins/mini"),
 
