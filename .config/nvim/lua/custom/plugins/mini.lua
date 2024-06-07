@@ -6,9 +6,29 @@ return {
 			--
 			-- Examples:
 			--  - va)  - [V]isually select [A]round [)]parenthen
+			--  - vib  - [V]isually select [I]nside [B]rackets (I think any)
 			--  - yinq - [Y]ank [I]nside [N]ext [']quote
 			--  - ci'  - [C]hange [I]nside [']quote
-			require("mini.ai").setup({ n_lines = 500 })
+			local gen_spec = require("mini.ai").gen_spec
+			require("mini.ai").setup({
+				custom_textobjects = {
+					-- Tweak argument to be recognized only inside `()`
+					a = gen_spec.argument({
+						brackets = { "%b()" },
+						-- separator = ';' -- and between ';'
+					}),
+					-- Function definition (needs treesitter queries with these captures)
+					f = gen_spec.treesitter({ a = "@function.outer", i = "@function.inner" }),
+					-- Conditional/Loop definition
+					o = gen_spec.treesitter({
+						a = { "@conditional.outer", "@loop.outer" },
+						i = { "@conditional.inner", "@loop.inner" },
+					}),
+					-- Make `|` select both edges in non-balanced way
+					["|"] = gen_spec.pair("|", "|", { type = "non-balanced" }),
+				},
+				n_lines = 500,
+			})
 
 			-- Add/delete/replace surroundings (brackets, quotes, etc.)
 			--

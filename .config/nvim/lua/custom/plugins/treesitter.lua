@@ -2,16 +2,33 @@ return {
 	{ -- highlight, edit, and navigate code
 		"nvim-treesitter/nvim-treesitter",
 		build = ":tsupdate",
+		dependencies = { "nvim-treesitter/nvim-treesitter-textobjects" },
 		config = function()
 			-- [[ configure treesitter ]] see `:help nvim-treesitter`
 
 			---@diagnostic disable-next-line: missing-fields
 			require("nvim-treesitter.configs").setup({
-				ensure_installed = { "bash", "c", "html", "lua", "markdown", "markdown_inline", "vim", "vimdoc" },
+				ensure_installed = {
+					"bash",
+					"c",
+					"go",
+					"html",
+					"lua",
+					"markdown",
+					"markdown_inline",
+					"python",
+					"regex",
+					"tsx",
+					"typescript",
+					"vim",
+					"vimdoc",
+					"yaml",
+				},
 				-- autoinstall languages that are not installed
 				auto_install = true,
 				highlight = { enable = true },
 				indent = { enable = true },
+
 				incremental_selection = {
 					enable = true,
 					keymaps = {
@@ -19,6 +36,19 @@ return {
 						node_incremental = "<c-space>",
 						scope_incremental = "<c-s>",
 						node_decremental = "<c-backspace>",
+					},
+				},
+
+				select = {
+					enable = true,
+					-- Automatically jump forward to textobj, similar to targets.vim
+					lookahead = true,
+					keymaps = {
+						-- You can use the capture groups defined in textobjects.scm
+						["af"] = "@function.outer",
+						["if"] = "@function.inner",
+						["ac"] = "@class.outer",
+						["ic"] = "@class.inner",
 					},
 				},
 			})
