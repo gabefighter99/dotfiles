@@ -115,6 +115,13 @@ jdk_11 # Use jdk 11 as the default jdk
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export PATH="/opt/homebrew/opt/node@18/bin:$PATH"
 alias vim=nvim
+alias nv=nvim
+alias v=nvim
+if ! [ -x "$(command -v go)" ] && [ -d "$(go env GOPATH)/bin/air" ]; then
+  alias air='$(go env GOPATH)/bin/air'
+fi
+
+# Copilot
 eval "$(gh copilot alias -- zsh)"
 
 # To customize prompt, run `p10k configure` or edit ~/.dotfiles/.p10k.zsh.
