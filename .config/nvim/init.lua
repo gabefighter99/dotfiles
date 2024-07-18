@@ -23,6 +23,8 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
 	"tpope/vim-sleuth", -- detect tabstop and shiftwidth automatically
 
+	"maxmellon/vim-jsx-pretty",
+
 	require("custom/plugins/comment"),
 
 	require("custom/plugins/nohlsearch"),
