@@ -117,9 +117,8 @@ export PATH="/opt/homebrew/opt/node@18/bin:$PATH"
 alias vim=nvim
 alias nv=nvim
 alias v=nvim
-if ! [ -x "$(command -v go)" ] && [ -d "$(go env GOPATH)/bin/air" ]; then
-  alias air='$(go env GOPATH)/bin/air'
-fi
+
+export PATH=$PATH:$(go env GOPATH)/bin
 
 # Copilot
 eval "$(gh copilot alias -- zsh)"
