@@ -107,7 +107,6 @@ return {
 							},
 							gofumpt = true,
 							completeUnimported = true,
-							memoryMode = "DegradeClosed",
 						},
 					},
 					flags = {

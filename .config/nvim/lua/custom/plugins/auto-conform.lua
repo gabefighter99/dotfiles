@@ -14,6 +14,7 @@ return {
 				-- Conform can also run multiple formatters sequentially { "isort", "black" }
 				python = { "isort", "black" }, -- isort for alphabetic imports
 
+				html = { "prettier" },
 				javascript = { "prettier" },
 				typescript = { "prettier" },
 				typescriptreact = { "prettier" },

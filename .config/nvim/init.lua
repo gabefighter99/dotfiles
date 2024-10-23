@@ -62,6 +62,10 @@ require("lazy").setup({
 
 	require("custom/plugins/oil"),
 
+	require("custom/plugins/harpoon"),
+
+	require("custom/plugins/colorizer"),
+
 	-- Or just:
 	-- { import = 'custom.plugins' },
 })
