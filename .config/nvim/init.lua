@@ -38,6 +38,8 @@ require("lazy").setup({
 	require("custom/plugins/lsp"),
 
 	require("custom/plugins/auto-conform"),
+	-- require("custom/plugins/nvim-lint"),
+	-- require("custom/plugins/none-ls"),
 
 	require("custom/plugins/cmp"),
 

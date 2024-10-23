@@ -123,6 +123,9 @@ return {
 				-- But for many setups, the LSP (`tsserver`) will work just fine
 				tsserver = {},
 				--
+				eslint = {
+					root_dir = require("lspconfig").util.root_pattern(".eslintrc.js", ".eslintrc.json", "package.json"),
+				},
 
 				lua_ls = {
 					-- cmd = {...}, -- Override the default command used to start the server
@@ -163,20 +166,18 @@ return {
 			local ensure_installed = vim.tbl_keys(servers or {})
 			vim.list_extend(ensure_installed, {
 				-- go
-				"gopls",
 				"gofumpt",
 
 				-- python
 				"black",
 				"isort",
-				"pyright",
 
 				-- lua
 				"stylua",
 
 				-- typescript
-				"tsserver",
 				"prettier",
+				-- "eslint_d",
 			})
 			require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 

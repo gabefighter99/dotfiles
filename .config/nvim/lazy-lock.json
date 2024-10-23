@@ -15,6 +15,7 @@
   "mason.nvim": { "branch": "main", "commit": "3b5068f0fc565f337d67a2d315d935f574848ee7" },
   "mini.nvim": { "branch": "main", "commit": "7827793105685d8158812bbdab027d11aac19c24" },
   "nvim-cmp": { "branch": "main", "commit": "04e0ca376d6abdbfc8b52180f8ea236cbfddf782" },
+  "nvim-lint": { "branch": "master", "commit": "99cab0b885aaa2f59736c047d23e9a7835d4f9a9" },
   "nvim-lspconfig": { "branch": "master", "commit": "9553725789be682ecd945a527ec552e489ea8534" },
   "nvim-treesitter": { "branch": "master", "commit": "aa0c7dd29631ee8c2df738d99bd33b762b3a6e22" },
   "nvim-treesitter-textobjects": { "branch": "master", "commit": "34867c69838078df7d6919b130c0541c0b400c47" },
@@ -30,6 +31,6 @@
   "vim-cool": { "branch": "master", "commit": "662e7b11064cbeedad17c45d2fe926e78d3cd0b6" },
   "vim-jsx-pretty": { "branch": "master", "commit": "6989f1663cc03d7da72b5ef1c03f87e6ddb70b41" },
   "vim-sleuth": { "branch": "master", "commit": "1cc4557420f215d02c4d2645a748a816c220e99b" },
-  "which-key.nvim": { "branch": "main", "commit": "4433e5ec9a507e5097571ed55c02ea9658fb268a" },
+  "which-key.nvim": { "branch": "main", "commit": "6c1584eb76b55629702716995cca4ae2798a9cca" },
   "wilder.nvim": { "branch": "master", "commit": "679f348dc90d80ff9ba0e7c470c40a4d038dcecf" }
 }
