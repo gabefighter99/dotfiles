@@ -37,9 +37,9 @@ require("lazy").setup({
 
 	require("custom/plugins/lsp"),
 
-	require("custom/plugins/auto-conform"),
-	-- require("custom/plugins/nvim-lint"),
 	-- require("custom/plugins/none-ls"),
+	require("custom/plugins/auto-conform"),
+	require("custom/plugins/nvim-lint"),
 
 	require("custom/plugins/cmp"),
 
@@ -65,6 +65,8 @@ require("lazy").setup({
 	require("custom/plugins/harpoon"),
 
 	require("custom/plugins/colorizer"),
+
+	require("custom/plugins/go-debugger"),
 
 	-- Or just:
 	-- { import = 'custom.plugins' },
