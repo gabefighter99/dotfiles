@@ -80,11 +80,3 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 		vim.highlight.on_yank()
 	end,
 })
-
--- File Preview Wrap
-vim.api.nvim_create_autocmd("User", {
-	pattern = "TelescopePreviewerLoaded",
-	callback = function()
-		vim.wo.wrap = true
-	end,
-})
